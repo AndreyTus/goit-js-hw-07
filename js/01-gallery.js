@@ -29,7 +29,7 @@ gallery.addEventListener('click', gallaryOnModal);
 
 function gallaryOnModal(e) {
     e.preventDefault();
-    if (!e.target.nodeName === 'IMG') {
+    if (e.target.nodeName !== 'IMG') {
         return;
     }
     const selectedImage = e.target.getAttribute('dataset');
